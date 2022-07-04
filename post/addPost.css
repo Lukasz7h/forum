@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+    overflow-x: hidden !important;
+    max-width: 100%; 
+}
+
+body{
+    background: url("../patterns/rainbow-vortex.svg");
+    background-repeat: no-repeat;
+    font-family: 'Kanit', sans-serif;
+    background-size: cover;
+}
+
+form{
+    color: whitesmoke;
+}
+
+@media(min-width: 170px)
+{
+
+    form{
+        margin-top: 8vh;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 42px;
+    }
+
+    button{
+        padding: 4px 7px;
+        max-width: 150px;
+        margin-left: 40%;
+    }
+
+    #topic{
+        margin-bottom: 5vh;
+        height: 26px;
+        font-size: 15px;
+    }
+
+    #photo{
+        margin-bottom: 26px;
+    }
+
+    #post_value{
+        margin-bottom: 4vh;
+        font-size: 15px;
+    }
+}
+
+@media(min-width: 450px)
+{
+   #topic{
+       width: 320px;
+       height: 28px;
+   } 
+
+   label{
+       margin-left: 28px;
+       font-size: 22px;
+       letter-spacing: 2px;
+   }
+
+   button{
+       margin-left: 70%;
+       font-size: 18px;
+       letter-spacing: 1px;
+   }
+}
+
+@media(min-width: 900px)
+{
+    form{
+        margin-top: 8vw;
+        padding: 0px;
+        width: fit-content;
+        margin-left: 50%;
+        transform: translate(-50%, 0%);
+    }  
+    
+    #post_value{
+        min-width: 700px;
+    }
+
+    button{
+        margin-left: 70%;
+        font-size: 17px;
+    }
+}

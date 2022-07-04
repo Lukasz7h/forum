@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#post div{
+    background-color: rgb(34, 58, 104);
+    color: whitesmoke;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#post_value{
+    color: rgb(51, 51, 51);
+    margin: 0;
+}
+
+img{
+    width: 38vw;
+    margin-top: 15px;
+}
+
+#post #info{
+    height: 53px;
+    padding-top: 38px;
+    width: 100%;
+    padding-left: 4%;
+}
+
+#container{
+    position: relative;
+}
+
+.that{
+    border: 4px solid rgb(196, 72, 58);
+}
+
+.comment{
+    margin-top: 80px;
+    background-color: rgb(211, 186, 84);
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgb(21, 22, 49);
+    padding-left: 50px;
+}
+
+.comment p{
+    width: 90%;
+}
+
+.review span{
+    margin-right: 12px;
+}
+
+button{
+    outline: none;
+    border: none;
+    background-color: aliceblue;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.to_edit{
+    border: 1px dashed black;
+}
+
+@media(min-width: 170px)
+{
+    body{
+        padding-bottom: 25px;
+    }
+
+    button{
+        width: 143px;
+        height: 28px;
+        margin-top: 17px;
+    }
+
+    #post{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #post label{
+        margin-top: 15px;
+    }
+
+    #info{
+        margin-top: 12px;
+    }
+
+    #post button:nth-of-type(1)
+    {
+        margin-top: 18px;
+    }
+
+    form{
+        margin-top: 7vh;
+    }
+
+    form textarea{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 35px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    form button{
+        margin-left: 10%;
+        margin-top: 20px;
+    }
+
+    .review span{
+        display: block;
+        float: right;
+    }
+}
+
+@media(min-width: 580px)
+{
+    body{
+        padding-bottom: 55px;
+    }
+
+    #post{
+        padding-left: 55px;
+        margin-top: 35px;
+    }
+
+    #post h3{
+        font-size: 29px;
+    }
+
+    #post span{
+        font-size: 20px;
+    }
+
+    #post_value{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    #post h3, span, p{
+        margin-left: 20px;
+    }
+
+    img{
+        width: 27vw;
+    }
+
+    form textarea{
+        height: 190px;
+        font-size: 19px;
+    }
+
+    .review span{
+        display: inline;
+        float: none;
+    }
+}
+
+@media(min-width: 900px)
+{
+    form textarea{
+        width: 450px;
+        transform: translate(-50%, 3%);
+    }
+
+    form button {
+        margin-left: 0%;
+        margin-top: 20px;
+        transform: translate(-150%, 3%);
+        position: relative;
+        left: 50%;
+    }
+
+    #post_value{
+        width: 96%;
+    }
+
+    #post div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        width: 104%;
+        margin-left: -4%;
+        height: 95px;
+        padding-top: 55px;
+    }
+
+    #post div h3{
+        flex-basis: 33%;
+        margin-top: 0px;
+    }
+
+    #post div span{
+        flex-basis: 33%;
+        height: min-content;
+    }
+
+    #post div p{
+        flex-basis: 100%;
+    }
+
+    #post button{
+        margin-top: 5px;
+    }
+
+    #post h3, span {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    img{
+        width: min-content;
+    }
+
+    .comment img{
+        width: 120px;
+    }
+}

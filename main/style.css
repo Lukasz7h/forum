@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+    overflow-x: hidden !important;
+    max-width: 100%; 
+}
+
+body{
+    background: url("../patterns/radiant-gradient.svg");
+    background-repeat: no-repeat;
+    font-family: 'Rajdhani', sans-serif;
+    background-size: cover;
+}
+
+button{
+    position: relative;
+    cursor: pointer;
+    padding: 3px 7px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-shadow: 0.3em 0.3em 0 0 rgb(238, 124, 153), inset 0.3em 0.3em 0 0 rgb(238, 124, 153);
+    transition: 0.3s ease-in;
+    color: rgb(238, 124, 153);
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+#solved{
+    box-shadow: 0.3em 0.3em 0 0 rgb(94, 30, 131), inset 0.3em 0.3em 0 0 rgb(94, 30, 131);
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    right: 3%;
+    top: 20px;
+}
+
+button:hover{
+    transition: 0.3s ease-in;
+    box-shadow: 0 0 0 0 rgb(252, 100, 138), inset 6em 3.5em 0 rgb(252, 100, 138);
+    color: whitesmoke;
+}
+
+#solved:hover{
+    transition: 0.3s ease-in;
+    box-shadow: 0 0 0 0 rgb(92, 23, 202), inset 6em 3.5em 0 rgb(92, 23, 202);
+    color: whitesmoke;
+}
+
+button a{
+    transition: 0.3s ease-in;
+}
+
+button:hover a{
+    transition: 0.3s ease-in;
+    color: whitesmoke;
+}
+
+.login h2{
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0px 0px 2px rgba(66, 68, 90, 1);
+}
+
+#solved a{
+    color: aliceblue;
+}
+
+article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 70%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+article div{
+    flex-basis: 15%;
+    height: 200px;
+    transition: 0.3s ease-in;
+    background: #c2c2c24d;
+}
+
+article div:hover{
+    transition: 0.3s ease-in;
+    background: #c2c2c283;
+}
+
+article div a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-decoration: none;
+    color: #e6e3e3;
+}
+
+div:hover{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(238, 124, 153);
+}
+
+.ban_time{
+    color: aliceblue;
+    position: relative;
+    top: 45px;
+    left: 120px;
+    font-size: 24px;
+}
+
+@media(min-width: 170px)
+{
+
+    header{
+        display: flex;
+        flex-direction: row;
+        height: 90px;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    header button{
+        margin-top: 12px;
+    }
+
+    .login{
+        flex-direction: column;
+    }
+
+    #login, #register{
+        margin-bottom: 5px;
+        width: 110px;
+        height: 25px;
+        margin: 0 auto;
+    }
+
+    article{
+        width: 80%;
+        height: fit-content;
+        margin-top: 5vw;
+    }
+
+    article div{
+        flex-basis: 75%;
+        height: 42vh;
+        min-height: 33vh;
+        margin-top: 7vh;
+        padding-top: 3vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    article div h4{
+        text-align: center;
+        font-size: 7vw;
+        position: relative;
+        z-index: 3;
+    }
+
+    article div img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 70%;
+        transform: translate(-50%, -50%)
+    }
+
+    article div p {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translate(-50%, 0%);
+    }
+}
+
+@media(min-width: 320px)
+{
+    .login{
+        top: 11%;
+        justify-content: space-around;
+    }
+
+    #solved{
+        z-index: 2;
+    }
+}
+
+@media(min-width: 500px)
+{
+
+    header{
+        height: 90px;
+        left: 5%;
+        top: 8%;
+    }
+
+    .login{
+        flex-direction: row;
+        top: 5%;
+        flex-wrap: wrap;
+    }
+
+    .login h2{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .login button{
+        height: 32px;
+        letter-spacing: 2px;
+        font-size: 14px;
+    }
+
+    #login {
+        margin-bottom: 15px;
+    }
+
+    article{
+        margin-top: 14vw;
+    }
+
+    article div{
+        flex-basis: 44%;
+        min-height: 24vh;
+        padding-top: 2vh;
+        margin-top: 5vh;
+        max-height: 35vh;
+    }
+
+    article div h4{
+        text-align: center;
+        font-size: 160%;
+        z-index: 3;
+    }
+
+    article div p {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translate(-50%, 0%);
+    }
+}
+
+@media(min-width: 800px)
+{
+
+    header{
+        height: 90px;
+        left: 12%;
+        top: 8%;
+    }
+
+    .login button{
+        font-size: 16px;
+    }
+
+    .login h2{
+        font-size: 43px;
+        letter-spacing: 6px;
+        margin-bottom: 25px;
+    }
+
+    #login, #register {
+        margin: 0;
+        margin-left: 25px;
+    }
+
+    #solved{
+        width: 148px;
+        height: 44px;
+        font-size: 16px;
+    }
+
+    article{
+        margin-top: 2vw;
+        margin-bottom: 6vh;
+    }
+
+    article div{
+        flex-basis: 30%;
+        padding-top: 2vh;
+        margin-top: 5vh;
+        min-height: 10vw;
+        height: 20vw;
+    }
+
+    article div h4{
+        text-align: center;
+        font-size: 160%;
+        z-index: 3;
+    }
+
+    article div p {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translate(-50%, 0%);
+    }
+}
+
+@media(min-width: 1100px)
+{
+    header{
+        position: static;
+        margin-top: 120px;
+        margin-left: 170px;
+    }
+
+    .login button{
+        width: 200px;
+    }
+
+    #login, #register{
+        width: 135px;
+        height: 35px;
+    }
+
+    #solved{
+        width: 220px;
+        height: 39px;
+        right: 4%;
+        top: 6%;
+    }
+
+    article{
+        margin-top: 5vh;
+        margin-bottom: 6vh;
+    }
+
+    article div{
+        flex-basis: 22%;
+        padding-top: 2vh;
+        margin-top: 5vh;
+        min-height: 12vw;
+        height: 14vw;
+    }
+
+    article div h4{
+        text-align: center;
+        font-size: 160%;
+        z-index: 3;
+    }
+
+    article div p {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translate(-50%, 0%);
+    }
+}
+
+@keyframes buttonAnim
+{
+    0%{
+        top: 100%;
+        color: #cacacade;
+    }
+
+    100%{
+        top: 0;
+        color: rgb(255, 255, 255);
+    }
+}

@@ -1,0 +1,51 @@
+form{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+form button{
+    margin-top: 10px;
+    padding: 4px 9px;
+}
+
+form input{
+    margin-bottom: 3vh;
+    width: 90%;
+}
+
+@media(min-width: 350px)
+{
+    form label{
+        font-size: 17px;
+    }
+
+    form input{
+        height: 20px;
+    }
+
+    form button{
+        width: 45%;
+    }
+}
+
+@media(min-width: 600px)
+{
+    form label{
+        font-size: 17px;
+    }
+
+    form input{
+        height: 20px;
+        width: 310px;
+    }
+
+    form button{
+        width: 140px;
+    }
+}

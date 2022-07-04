@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+    overflow-x: hidden !important;
+    max-width: 100%; 
+}
+
+body{
+    background: url("../patterns/radiant-gradient.svg");
+    background-repeat: no-repeat;
+    font-family: 'Kanit', sans-serif;
+    background-size: cover;
+}
+
+img{
+    width: 130px;
+    cursor: pointer;
+}
+
+#profil{
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+    border: 3px dashed rgb(197, 197, 197);
+}
+
+button{
+    position: relative;
+    cursor: pointer;
+    padding: 3px 7px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-shadow: 0.3em 0.3em 0 0 rgb(238, 124, 153), inset 0.3em 0.3em 0 0 rgb(238, 124, 153);
+    transition: 0.3s ease-in;
+    color: rgb(238, 124, 153);
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+button:hover{
+    transition: 0.3s ease-in;
+    box-shadow: 0 0 0 0 rgb(252, 100, 138), inset 6em 3.5em 0 rgb(252, 100, 138);
+    color: whitesmoke;
+}
+
+#profil>input{
+    cursor: pointer;
+}
+
+#profil:hover::after{
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    right: 0%;
+    transform: translate(25%, -50%);
+    content: "Zmień zdjęcie";
+    width: fit-content;
+    height: 20px;
+}
+
+img:hover{
+    filter: sepia(0.8);
+}
+
+#remove_profil{
+    position: absolute;
+    right: 350px;
+}
+
+#container{
+    margin-left: 140px;
+    margin-top: 70px;
+    position: relative;
+    color: rgb(223, 223, 223);
+    padding-bottom: 30px;
+}
+
+#notification{
+    position: absolute;
+    top: 15%;
+    right: 16%;
+    width: 170px;
+    z-index: 3;
+}
+
+#notification div{
+    height: 0;
+    overflow: hidden;
+    background-color: aliceblue;
+}
+
+#notification a div{
+    height: fit-content;
+    overflow: auto;
+}
+
+#notification button{
+    padding: 6px 8px;
+    width: 100%;
+}
+
+.has{
+    background-color: rgb(134, 49, 43);
+}
+
+#my_posts{
+    position: absolute;
+    top: 15%;
+    right: 13%;
+    z-index: 5;
+    width: fit-content;
+    height: 35px;
+}
+
+#my_posts button{
+    position: absolute;
+    margin: 0;
+    top: 0%;
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
+    z-index: 5;
+}
+
+a{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+@media(min-width: 170px)
+{
+
+    h2{
+        text-align: center;
+        margin-top: 10vh;
+    }
+
+    h4, p{
+        margin-left: 3vw;
+    }
+
+    h4{
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+
+    #add_email{
+        margin-top: 22px;
+    }
+
+    #container{
+        margin: 0px 0px 30px 0px;
+    }
+
+    #remove_profil{
+        right: 5vw;
+        bottom: -9vh;
+    }
+
+    #profil{
+        margin: 0 auto;
+    }
+
+    #notification{
+        position: relative;
+        top: calc(105% - 70px);
+        left: 50%;
+        transform: translate(-50%, 180%);
+    }
+
+    #my_posts {
+        position: relative;
+        left: 50%;
+        top: 15%;
+        transform: translate(-50%, 100%);
+        font-size: 10px;
+        padding: 3px 5px;
+        display: block;
+        width: 70%;
+    }
+
+    #my_posts button{
+        width: 100%;
+    }
+}
+
+@media(min-width: 300px)
+{
+    #container{
+        margin-top: 45px;
+    }
+
+    #add_email input{
+        height: 22px;
+        width: 180px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    #add_email button{
+        padding: 5px 6px;
+        font-size: 13px;
+    }
+
+    h2{
+        margin-top: 6vh;
+    }
+
+    h4, p{
+        font-size: 16px;
+    }
+
+    a button{
+        width: 105px;
+        height: 28px;
+    }
+
+    #notification{
+        position: absolute;
+        width: 85px;
+        right: 5%;
+        top: 10%;
+        transform: translate(0%, 0%);
+        left: auto;
+    }
+
+    #notification button{
+        font-size: 10px;
+    }
+
+    #my_posts {
+        position: absolute;
+        left: 5%;
+        top: 10%;
+        font-size: 10px;
+        padding: 3px 5px;
+        transform: translate(0%, 0%);
+    }
+
+    #my_posts, #my_posts button{
+        width: 85px;
+    }
+}
+
+@media(min-width: 450px)
+{
+    #container{
+        padding-left: 45px;
+    }
+
+    #profil{
+        margin: 0px 0px;
+    }
+
+    #profil, #profil img{
+        width: 32vw;
+        height: 32vw;
+    }
+
+    h2{
+        text-align: left;
+        width: fit-content;
+        margin-left: 10vw;
+    }
+
+    h2:first-of-type{
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+        font-size: 38px;
+    }
+
+    #notification
+    {
+        right: 10%;
+        top: 15%;
+    }
+
+    #notification button{
+        font-size: 11px;
+    }
+
+    #my_posts{
+        left: auto;
+        right: 8%;
+        top: 20%;
+        width: 105px;
+        padding: 3px 5px;
+    }
+
+    #my_posts button{
+        width: 100%;
+    }
+}
+
+@media(min-width: 650px)
+{
+    #profil, #profil img{
+        width: 22vw;
+        height: 22vw;
+        max-width: 265px;
+        max-height: 265px;
+    }
+
+    #container{
+        padding-left: 12%;
+        margin-bottom: 45px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    h4, p{
+        font-size: 18px;
+    }
+
+    h2:first-of-type{
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+        font-size: 40px;
+        letter-spacing: 2px;
+        margin-left: -6%;
+    }
+
+    a button{
+        margin-left: 50px;
+    }
+
+    #notification{
+        width: 105px;
+        right: 28%;
+    }
+
+    #my_posts{
+        top: 15%;
+        right: 9%;
+    }
+}
+
+@media(min-width: 900px)
+{
+    h4, p{
+        font-size: 21px;
+    }
+
+    #add_email{
+        margin-top: 60px;
+    }
+
+    #add_email input{
+        height: 28px;
+        width: 260px;
+        font-size: 18px;
+    }
+
+    #add_email button{
+        padding: 6px 8px;
+        font-size: 15px;
+    }
+
+    a button{
+        width: 118px;
+        height: 34px;
+        font-size: 16px;
+        margin-left: 12%;
+    }
+
+    #remove_profil{
+        right: 13vw;
+    }
+
+    #notification{
+        width: 120px;
+        right: 23%;
+    }
+
+    #my_posts{
+        right: 10%;
+    }
+}
+
+@media(min-width: 1200px)
+{
+    #remove_profil{
+        bottom: 0vh;
+        right: 17vw;
+    }
+    
+    button, a button{
+        width: 175px;
+        height: 37px;
+    }
+}

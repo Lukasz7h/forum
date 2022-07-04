@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    height: 220px;
+    margin: 20px auto;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+@media(min-width: 170px)
+{
+    body{
+        padding-top: 35px;
+    }
+
+    div{
+        width: 65%;
+    }
+}
+
+@media(min-width: 900px)
+{
+    body{
+        padding-top: 65px;
+    }
+
+    div{
+        width: 42%;
+    }
+}

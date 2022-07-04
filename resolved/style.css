@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+    overflow-x: hidden !important;
+    max-width: 100%; 
+}
+
+body{
+    background: url("../patterns/flat-mountains.svg");
+    background-repeat: no-repeat;
+    font-family: 'Rajdhani', sans-serif;
+    background-size: cover;
+}
+
+label, p, p>a{
+    color: aliceblue;
+}
+
+main{
+    width: 100%;
+}
+
+#contain{
+    position: sticky;
+    top: 0%;
+    width: calc(100% - 4px);
+}
+
+#panel{
+    top: 80px;
+    left: 50px;
+    width: fit-content;
+    border: 2px solid black;
+    padding: 0px;
+}
+
+.post{
+    width: 42%;
+    height: 220px;
+    margin: 20px auto;
+    border: 1px solid black;
+    overflow: hidden;
+    color: rgb(87, 87, 87);
+    background-color: #f0f0f0eb;
+}
+
+h3{
+    margin-top: 45px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+p{
+    margin-top: 35px;
+    text-align: center;
+}
+
+select{
+    border: none;
+    border-radius: 4px;
+    padding: 4px 7px;
+    letter-spacing: 2px;
+}
+
+@media(min-width: 170px)
+{
+    #panel{
+        margin: 0px auto;
+        top: -50%;
+        height: 0px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #contain i{
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin: 2px auto;
+        font-size: 24px;
+        text-align: center;
+        margin-left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    #panel input{
+        height: 25px;
+        width: 95%;
+    }
+
+    article{
+        margin-top: 10vh;
+    }
+
+    .post{
+        width: 80%;
+        height: 40vh;
+    }
+}
+
+@media(min-width: 300px)
+{
+    .post{
+        width: 80%;
+        height: 20vh;
+    }
+}
+
+@media(min-width: 500px)
+{
+    .post{
+        width: 80%;
+        height: 20vh;
+    }
+
+    #contain{
+        position: relative;
+        padding-top: 30px;
+    }
+
+    #panel{
+        position: relative;
+        left: 0%;
+        height: 100px;
+        width: 75%;
+        overflow: hidden;
+        border: none;
+    }
+
+    #panel input{
+        width: 65%;
+    }
+
+    #contain i{
+        display: none;
+    }
+}
+
+@media (min-width: 701px){
+
+    #panel{
+        left: 0%;
+        width: 55%;
+    }
+
+    #panel input{
+        width: 290px;
+    }
+
+    .post{
+        width: 58%;
+        height: 16vh;
+    }
+}
+
+@media (min-width: 1100px)
+{
+    #contain{
+        position: relative;
+        padding-top: 60px;
+    }
+
+    #panel{
+        width: 65%;
+        margin-top: 50px;
+    }
+
+    .post{
+        width: 52%;
+        height: 17vh;
+        margin: 28px auto;
+    }
+}
+
+@media (min-width: 1500px)
+{
+    #panel{
+        width: 65%;
+    }
+
+    .post{
+        width: 47%;
+        height: 19vh;
+        margin: 38px auto;
+        overflow: hidden;
+    }
+}
