@@ -40,40 +40,40 @@
                         if($post->id == $row[0]) $post->comm_amount++;
                     };
                 };
-            };
 
-            $posts_id_string = implode(" OR id=", $posts_id_arr);
-            $query = "SELECT id, comm_amount FROM users_posts WHERE id=".$posts_id_string;
+                $posts_id_string = implode(" OR id=", $posts_id_arr);
+                $query = "SELECT id, comm_amount FROM users_posts WHERE id=".$posts_id_string;
 
-            $posts_change = [];
+                $posts_change = [];
 
-            $res = $connect->query($query);
+                $res = $connect->query($query);
 
-            if($res && $res->num_rows > 0)
-            {
-                while($row = $res->fetch_row())
+                if($res && $res->num_rows > 0)
                 {
-                    foreach($posts as $post)
+                    while($row = $res->fetch_row())
                     {
-                        if($post->id == $row[0])
+                        foreach($posts as $post)
                         {
-                            if($row[1] < $post->comm_amount) array_push($posts_change, $row[0]);
+                            if($post->id == $row[0])
+                            {
+                                if($row[1] < $post->comm_amount) array_push($posts_change, $row[0]);
+                            };
                         };
                     };
                 };
-            };
 
-            $class = count($posts_change) > 0? 'has': 'not_has';
-            echo "<button class='".$class."'>Powiadomienia</button>";
+                $class = count($posts_change) > 0? 'has': 'not_has';
+                echo "<button class='".$class."'>Powiadomienia</button>";
 
-            if(count($posts_change) > 0)
-            {
-                echo "<div>";
-                foreach($posts_change as $post_id)
+                if(count($posts_change) > 0)
                 {
-                    echo "<a href='http://localhost/forum/detail/index.php?post=".$post_id."'><div class='post'>POST</div></a>";
+                    echo "<div>";
+                    foreach($posts_change as $post_id)
+                    {
+                        echo "<a href='http://localhost/forum/detail/index.php?post=".$post_id."'><div class='post'>POST</div></a>";
+                    };
+                    echo "</div>";
                 };
-                echo "</div>";
             };
         }
     };
