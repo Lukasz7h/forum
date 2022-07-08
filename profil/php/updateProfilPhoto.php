@@ -91,8 +91,6 @@
                     $prepera->execute();
 
                     $prepera->fetch();
-                    $prepera->store_result();
-
                     $res = $photo_profil;
                 }
                 while($res > 0);
