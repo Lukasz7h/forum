@@ -1,5 +1,13 @@
 <?php
 
+    require 'includes/PHPMailer.php';
+	require 'includes/SMTP.php';
+	require 'includes/Exception.php';
+
+    use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\SMTP;
+	use PHPMailer\PHPMailer\Exception;
+
     require_once($_SERVER["DOCUMENT_ROOT"]."../forum/authorize.php");
     require_once($_SERVER["DOCUMENT_ROOT"]."../forum/propertyDB.php");
     session_start();
@@ -50,10 +58,27 @@
             $connect->close();
 
             $link = "http://".$_SERVER["HTTP_HOST"]."/forum/email";
-            $message = "Naciśnij na podany link aby potwierdzić, że podany e-mail należy do ciebie. ".$link;
+            $mail->isSMTP();											
 
-            $headers = "From: luuukasz368@gmail.com";
-            mail($email, "Weryfikacja adresu e-mail", $message, $headers);
+            $mail->Host	 = 'smtp.gmail.com';					
+            $mail->SMTPAuth = true;							
+
+            $mail->Username = 'luuukasz368@gmail.com';				
+            $mail->Password = 'uxyecwfhnadxtvck';						
+
+            $mail->SMTPSecure = 'tls';							
+            $mail->Port	 = 587;
+
+            $mail->setFrom('mytestforumxyyw@gmail.com', 'Name');		
+            $mail->addAddress('luuukasz368@gmail.com');
+
+            $mail->addAddress('luuukasz368@gmail.com', 'Name');
+            $mail->isHTML(true);								
+
+            $mail->Subject = 'Weryfikacja adresu e-mail';
+
+            $mail->Body = "<b>Zwefyrikuj swoje konto: $link</b>";
+            $mail->send();
 
             $reqObj = (object)[];
             $reqObj->email_changed = true;
