@@ -1,5 +1,13 @@
 <?php
 
+    require $_SERVER["DOCUMENT_ROOT"].'/forum/profil/php/includes/PHPMailer.php';
+	require $_SERVER["DOCUMENT_ROOT"].'/forum/profil/php/includes/SMTP.php';
+	require $_SERVER["DOCUMENT_ROOT"].'/forum/profil/php/includes/Exception.php';
+
+    use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\SMTP;
+	use PHPMailer\PHPMailer\Exception;
+
     require_once($_SERVER["DOCUMENT_ROOT"]."../forum/propertyDB.php");
     require_once($_SERVER["DOCUMENT_ROOT"]."../forum/forgive_password/generatePassToken.php");
 
@@ -55,8 +63,28 @@
             $link = "http://".$_SERVER["HTTP_HOST"]."/forum/change_password?token=".$token;
             $message = "Zmień hasło. ".$link;
 
-            $headers = "From: mytestforumxyyw@gmail.com";
-            mail($accountData->email, "Zmień hasło", $message, $headers);
+            $mail = new PHPMailer(true);							
+            $mail->isSMTP();											
+
+            $mail->Host	 = 'smtp.gmail.com';					
+            $mail->SMTPAuth = true;							
+
+            $mail->Username = 'luuukasz368@gmail.com';				
+            $mail->Password = 'uxyecwfhnadxtvck';						
+
+            $mail->SMTPSecure = 'tls';							
+            $mail->Port	 = 587;
+
+            $mail->setFrom('mytestforumxyyw@gmail.com', 'Name');		
+            $mail->addAddress('luuukasz368@gmail.com');
+
+            $mail->addAddress('luuukasz368@gmail.com', 'Name');
+            $mail->isHTML(true);								
+
+            $mail->Subject = 'Weryfikacja adresu e-mail';
+
+            $mail->Body = "<b>Zwefyrikuj swoje konto: $link</b>";
+            $mail->send();
 
             $res = (object)array("change" => true);
             echo json_encode($res);
