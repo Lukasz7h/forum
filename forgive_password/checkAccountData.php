@@ -81,9 +81,9 @@
             $mail->addAddress('luuukasz368@gmail.com', 'Name');
             $mail->isHTML(true);								
 
-            $mail->Subject = 'Weryfikacja adresu e-mail';
+            $mail->Subject = 'Zmień hasło';
 
-            $mail->Body = "<b>Zwefyrikuj swoje konto: $link</b>";
+            $mail->Body = "<b>Zmień hasło: $link</b>";
             $mail->send();
 
             $res = (object)array("change" => true);
