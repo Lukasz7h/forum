@@ -1,2 +1,3 @@
 # forum
-Folder named 'data' contains the database and files which you have to replace with original files. I use local server 'xampp' for that project.
+Folder named 'data' contains the files with databases which you have to add. I use local server 'xampp' for that project.
+The database use at this project is MariaDB.
