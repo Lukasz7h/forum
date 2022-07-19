@@ -68,8 +68,6 @@ export class Ajax
 
         xhr.open("POST", res.link, true);
         if(res.flag) xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-
-        console.log(res);
     
         xhr.send(res.send);
         return new Promise((resolve) => {

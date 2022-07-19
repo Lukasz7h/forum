@@ -14,9 +14,7 @@ function check(e)
             {
                 if(xhr.readyState === 4)
                 {
-                    console.log(xhr.response);
                     const res = JSON.parse(xhr.response);
-
                     res.error? showError("err"):(alert("Hasło zostało zmienione"), window.location.href = "http://"+getHost()+"/forum/main/");
                 }
             }

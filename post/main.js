@@ -18,8 +18,7 @@ class Ajax extends Errors
             if(xhr.status === 200 && xhr.readyState === 4)
             {
                 const host = getHost();
-                
-                console.log(xhr.response);
+        
                 if(xhr.response === "done")
                 {
                     window.location.href = "http://"+host+"/forum/main/";

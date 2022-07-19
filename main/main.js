@@ -12,8 +12,6 @@ import { Listener } from "./listener.js";
             const myAccount = `<button><a href="../profil/">Moje konto</a></button>`;
 
             const h2 = `<h2>Witaj ${res.login}!</h2>`;
-
-            console.log(res);
             
             if(res.ban && res.can == 0)
             {

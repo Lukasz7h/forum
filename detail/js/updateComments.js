@@ -4,7 +4,6 @@ import { addButtonListener } from "./listener.js";
 //dodajemy komentarz
 function addComment(comment)
 {
-    console.log(comment);
     const section = document.querySelector("section");
 
     const commentDiv = document.createElement("div");

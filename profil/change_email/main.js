@@ -5,5 +5,5 @@ const button = document.getElementById("add_emailButt");
 
 export function emailButton()
 {
-    button?.addEventListener("click", () => {validEmail(false, inp.value); console.log(inp.value)});
+    button?.addEventListener("click", () => {validEmail(false, inp.value)});
 };

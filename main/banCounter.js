@@ -26,7 +26,6 @@ function banIsOver()
             {
                 if(xhr.readyState === 4)
                 {
-                    console.log(xhr.response);
                     const res = JSON.parse(xhr.response);
 
                     if(!res.ban) endBan();
