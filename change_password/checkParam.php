@@ -29,6 +29,8 @@
 
             $prepare->store_result();
 
+            var_dump($prepare);
+
             if($prepare->num_rows === 0)
             {
                 header("Location: http://".$_SERVER["HTTP_HOST"]."/forum/main/");
