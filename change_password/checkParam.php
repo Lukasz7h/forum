@@ -27,6 +27,8 @@
             $prepare->bind_result($user_id);
             $prepare->execute();
 
+            $prepare->store_result();
+
             if($prepare->num_rows === 0)
             {
                 header("Location: http://".$_SERVER["HTTP_HOST"]."/forum/main/");
