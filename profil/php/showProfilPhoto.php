@@ -20,7 +20,12 @@
 
             $photo = $row[0];
             if(!$photo) $photo = "user.png";
-            @$content = base64_encode(file_get_contents($_SERVER["DOCUMENT_ROOT"]."/forum/profil_photos/".$photo));
+            
+            @$content = base64_encode(
+                file_get_contents($_SERVER["DOCUMENT_ROOT"]."/forum/profil_photos/".$photo)?
+                file_get_contents($_SERVER["DOCUMENT_ROOT"]."/forum/profil_photos/".$photo):
+                file_get_contents($_SERVER["DOCUMENT_ROOT"]."/forum/profil_photos/user.png")
+            );
 
             echo $content;
         }
