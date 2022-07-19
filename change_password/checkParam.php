@@ -28,14 +28,13 @@
             $prepare->execute();
 
             $prepare->store_result();
-
-            var_dump($prepare);
-
-            if($prepare->num_rows === 0)
+            $prepare->fetch();
+            
+            if($prepare->num_rows === 0 || $isset_token !== $_token)
             {
                 header("Location: http://".$_SERVER["HTTP_HOST"]."/forum/main/");
                 die;
-            }
+            };
 
         }
     }
